@@ -12,7 +12,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = ">= 1.0.0, <= 3.31.0"
+      version = ">= 1.0.0, <= 3.70.0"
     }
   }
 }
@@ -27,6 +27,7 @@ resource "aws_instance" "webserver" {
   ami           = lookup(var.ami_web, var.aws_region)
   instance_type = "t2.micro"
   count         = var.aws_count_instante
+  #private_ip = var.subnet_cidr
   
   tags = {
 

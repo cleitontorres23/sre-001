@@ -1,6 +1,6 @@
 # Variable files
 variable "aws_region"{
-  description   = "Default region to set"  
+  description   = "Default region to set --> N. Virginia"  
   default       = "us-east-1" 
 }
 
@@ -9,7 +9,7 @@ variable "ami_web" {
     description = "Image id to deploy EC2"
     type = map
     default = {
-        "us-east-1" = "ami-0ac80df6eff0e70b5"
+        "us-east-1" = "ami-04505e74c0741db8d"
   }
 }
 
@@ -21,5 +21,6 @@ variable "aws_count_instante"{
 
 # List the subnets have requested network 
 variable "subnet_cidr"{
-  default = ["10.10.100.0/24","10.10.200.0/24"]
+  default = ["10.10.100.0/24"]
+
 }
